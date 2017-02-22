@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> {{title or "Word App"}} </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+</head>
+<body>
+  <header style="color:green">
+    Aplicación de búsqueda de palabras
+  </header>
+  <div class="row">
+    <div class="twelve columns">
+
+  {% block content %}
+    Esta es la parte del contenido de la app.
+  {% endblock %}
+  {#Esto es un comentario de jinja#}
+  <!--Esto es un comentario de html-->
+  <br>
+  {% block footer %}
+    {#Esta es la parte del contenido de la app.#}
+  {% endblock %}
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base_words.html" %}
+
+{% block content %}
+  <h1>
+    Palabra: {{word}}
+  <br>
+  Definiciones
+  </h1>
+  {% if definitions|length==0 %}
+  <br>No hay definiciones para la palabra buscada
+  {% else %}
+    {% for i in definitions%}
+    <br>
+      ° {{i}}
+    {% endfor %}
+  {% endif %}
+{% endblock %}
