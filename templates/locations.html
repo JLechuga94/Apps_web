@@ -1,0 +1,13 @@
+{% extends "base_locations.html" %}
+
+{% block content %}
+<h1 class="text-center">Tremendos lugares para ir a comer</h1>
+
+  {% for i in range(nombres|length) %}
+    <br>
+      ° {{nombres[i]}} Calificación  {{ratings[i]}}
+      <br>
+      {{ubicaciones[i]}}
+      <br>
+{% endfor %}
+{% endblock %}
