@@ -1,13 +1,98 @@
 {% extends "base_locations.html" %}
 
 {% block content %}
-<h1 class="text-center">Tremendos lugares para ir a comer</h1>
+<div class="wrapper">
 
-  {% for i in range(nombres|length) %}
-    <br>
-      ° {{nombres[i]}} Calificación  {{ratings[i]}}
-      <br>
-      {{ubicaciones[i]}}
-      <br>
-{% endfor %}
+{% if  type == 'restaurant' %}
+<div class="container clearfix">
+  <div class="pull-left page-category-title">
+    <h1>Resultado de restaurantes en {{zone}}</h1>
+  </div>
+</div>
+
+{% elif type == 'bar' %}
+<div class="container clearfix">
+  <div class="pull-left page-category-title">
+    <h1>Resultado de bares en {{zone}}</h1>
+  </div>
+</div>
+
+{% elif  type == 'lodging' %}
+<div class="container clearfix">
+  <div class="pull-left page-category-title">
+    <h1>Resultado de hoteles en {{zone}}</h1>
+  </div>
+</div>
+
+{% elif  type == 'shopping_mall' %}
+<div class="container clearfix">
+  <div class="pull-left page-category-title">
+    <h1>Resultado de tiendas en {{zone}}</h1>
+  </div>
+</div>
+
+{% elif type == 'cafe' %}
+<div class="container clearfix">
+  <div class="pull-left page-category-title">
+    <h1>Resultado de cafés en {{zone}}</h1>
+  </div>
+</div>
+{% endif %}
+
+
+<div class="page-content">
+  <div class="wrapper">
+    <div id="img-grid" class="row">
+      {% for i in range(nombres|length) %}
+      <div class="crop col-xs-3">
+        <div class="thumbnail">
+          <img class="image-responsive imagen-lugares" src={{photos[i]}}>
+            <div class="caption">
+              <p class="letra_nombres"><strong>{{nombres[i]}}</strong></p>
+
+          {% if (ratings[i] == 0) %}
+          <p class="letra_rating"><span class="no-rating"></span>
+
+          {% elif (ratings[i] > 0) and (ratings[i] < 1) %}
+          <p class="letra_rating"><span class="estrella-punto-cinco"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] == 1) %}
+          <p class="letra_rating"><span class="estrella-uno"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] > 1) and (ratings[i] < 2) %}
+          <p class="letra_rating"><span class="estrella-uno-cinco"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] == 2) %}
+          <p class="letra_rating"><span class="estrella-dos"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] > 2) and (ratings[i] < 3)%}
+          <p class="letra_rating"><span class="estrella-dos-cinco"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] == 3) %}
+          <p class="letra_rating"><span class="estrella-tres"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] > 3) and (ratings[i] < 4) %}
+          <p class="letra_rating"><span class="estrella-tres-cinco"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] == 4) %}
+          <p class="letra_rating"><span class="estrella-cuatro"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] > 4) and (ratings[i]< 5) %}
+          <p class="letra_rating"><span class="estrella-cuatro-cinco"></span> {{ratings[i]}}
+
+          {% elif (ratings[i] == 5) %}
+          <p class="letra_rating"><span class="estrella-cinco"></span> {{ratings[i]}}
+
+          {% endif %}
+
+              <br align="center"><a href={{mapas[i]}} target="_blank">{{ubicaciones[i]}}</a></p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

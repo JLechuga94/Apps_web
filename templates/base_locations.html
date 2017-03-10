@@ -1,28 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title> {{title or "Places app"}} </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" /> -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Slabo+27px|Montserrat|Lora|Pacifico|Poiret+One|Supermercado+One|Raleway" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <title>LocaChilango: La aplicación para búsqueda de comercios en la CDMX</title>
+<style>
+body {
+    font-family: Lora,cursive;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color:white;
+  }
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.crop {
+text-align: center;
+}
+.crop img{
+  width: auto; /*set the width or max-width*/
+  height: 250px;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-size: 22px;
+  font-family: Lora,cursive;;
+  color: #3b3b3b;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  }
+.footer{
+  background-color:#363636;
+  position: static;
+  bottom: 0;
+  left:0;
+  padding-top:15px;
+  padding-bottom: 10px;
+}
+.header{
+  background-color:#2A2E32;
+}
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.copyright{
+  border-top: 1px solid #5e5e5e;
+  margin-top: 50px;
+  padding: 30px 0;
+}
+.navbar{
+  margin-bottom: 0;
+  border: none;
+}
+.wrapper{
+  background-color: #D6D6D6;
+}
+.thumbnail{
+     border:none !important;
+     background: transparent !important;
+     box-shadow: none!important;
+  }
+.moreinfo {
+    background: #D6D6D6;
+    text-align: justify;
+    font-size: 14px;
+}
+.padding-top-30 {
+    padding-top: 0px;
+}
+.padding-bottom-30 {
+    padding-bottom: 30px;
+}
+
+#header-style1 .nav li a{
+  color: #3c3c3c;
+  border-bottom: 2px solid transparent;
+  transition: all .5s ease;
+  padding-top: 17px;
+  font-size: 18px;
+}
+#mainbanner{
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #D6D6D6;
+  /*background: linear-gradient(60deg,#D6D6D6 0%,rgba(40,210,253,1));*/
+  height: 300px;
+  color: #fff;
+  text-align: center;
+  padding-top: 5%;
+}
+#mainbanner h1{
+  font-size: 42px;
+  color: #22222;
+}
+#sub-image h2{
+  font-size: 32px;
+  color: #22222 ;
+  text-align: center;
+}
+#sub-image h3{
+  font-size: 22px;
+  color: #22222;
+  text-align: center;
+}
+.letra_barra{
+  font-family: Lora,cursive;color: #3b3b3b;
+  text-align: center;
+}
+.logo_header{
+  font-family:Lobster,monospace;
+  font-size: 50px;
+  color:#3b3b3b;
+}
+.letra_nombres
+{
+  font-family:Lobster,monospace;
+  font-size: 25px;
+  color:#3b3b3b;
+  text-align: center;
+}
+.letra_rating
+{
+  font-family:Lora,monospace;
+  font-size: 18px;
+  color:#3b3b3b;
+  text-align: center;
+}
+.no-rating:before{
+   content: "\f006\f006\f006\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-punto-cinco:before{
+   content: "\f123\f006\f006\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-uno:before{
+   content: "\f005\f006\f006\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-uno-cinco:before{
+   content: "\f005\f123\f006\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-dos:before{
+   content: "\f005\f005\f006\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-dos-cinco:before{
+   content: "\f005\f005\f123\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-tres:before{
+   content: "\f005\f005\f005\f006\f006";
+    font-family: FontAwesome;
+}
+.estrella-tres-cinco:before{
+   content: "\f005\f005\f005\f123\f006";
+    font-family: FontAwesome;
+}
+.estrella-cuatro:before{
+   content: "\f005\f005\f005\f005\f006";
+    font-family: FontAwesome;
+}
+.estrella-cuatro-cinco:before{
+   content: "\f005\f005\f005\f005\f123";
+    font-family: FontAwesome;
+}
+.estrella-cinco:before{
+   content: "\f005\f005\f005\f005\f005";
+    font-family: FontAwesome;
+}
+
+@media only screen and (max-width : 1600px) {
+  .letra_titulo{
+    color:white;font-family:Lobster,monospace;font-size:50px;}
+  }
+
+   @media only screen and (max-width : 900px) {
+     .letra_titulo{
+       color:white;font-family:Lobster,monospace;font-size:28px;}
+
+   }
+
+   @media only screen and (max-width : 768px) {
+     .letra_titulo{
+       color:white;font-family:Lobster,monospace;font-size:18px;}
+
+   }
+
+   @media only screen and (max-width : 480px) {
+     .letra_titulo{
+       color:white;font-family:Lobster,monospace;font-size:12px;}
+
+   }
+
+   @media only screen and (max-width : 320px) {
+     .letra_titulo{
+       color:white;font-family:Lobster,monospace;font-size:5px;}
+   }
+
+</style>
 </head>
 <body>
-  <header  style="color:green font-family:Lobster,Monospace">
-    Aplicación de búsqueda de lugares en Ciudad de México
-  </header>
+<div class="header container-fluid">
   <div class="row">
-    <div class="twelve columns">
-
-  {% block content %}
-    Esta es la parte del contenido de la app.
-  {% endblock %}
-  {#Esto es un comentario de jinja#}
-  <!--Esto es un comentario de html-->
-  <br>
-  {% block footer %}
-    {#Esta es la parte del contenido de la app.#}
-  {% endblock %}
+    <div class="col-xs-2">
+  <h8 class="text-primary text-responsive letra_titulo">LocaChilango</h8>
+      </div>
+    <div class="col-xs-1">
+  <a href="#"><img class="img-responsive" src="https://img.clipartfest.com/872aca1417477e04ad627033962c5c4e_location20icon20vector-location-clipart_2481-2073.svg" alt="Símbolo gps"></a>
+      </div>
+    </div>
+  </div>
+<div id="header-style1">
+    <div class="container">
+      <nav role="navigation" class="navbar plain">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-target="#navbar-collapse-02" data-toggle="collapse">
+             <i class="fa fa-bars"></i></button>
+        </div>
+        <div id="navbar-collapse-02" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="letra_barra"><a href="/home"><i class="fa fa-home"></i> Home</a></li>
+            <li class="letra_barra"><a href="/restaurant"> <i class="fa fa-cutlery"></i> Restaurantes</a></li>
+            <li class="letra_barra"><a href="/cafe"><i class="fa fa-coffee"></i> Cafés</a></li>
+            <li class="letra_barra"><a href="/bar"> <i class="fa fa-beer"></i> Bares</a></li>
+            <li class="letra_barra"><a href="/lodging"><i class="fa fa-bed"></i> Hoteles</a></li>
+            <li class="letra_barra"><a href="/shopping_mall"><i class="fa fa-shopping-bag"></i> Tiendas</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 </div>
+{% block content %}
+{% endblock %}
+<div class="footer">
+<div class="row">
+<div class="text-center">
+  <div class="col-xs-3">
+    <a href="https://www.facebook.com/INFO.CDMX/" target="_self">
+    <i class="fa fa-facebook face fa-2x" style="color:#3b5998"></i>
+  </a></div>
+  <div class="col-xs-3">
+  <a href="https://twitter.com/gobcdmx?lang=es" target="_self">
+    <i class="fa fa-twitter twit fa-2x"></i>
+  </a></div>
+  <div class="col-xs-3">
+  <a href="https://www.youtube.com/watch?v=kJmHX67OUPM&t=28s" target="_self">
+    <i class="fa fa-youtube gplus fa-2x" style="color:#e52d27"></i>
+  </a></div>
+  <div class="col-xs-3">
+  <a href="https://www.instagram.com/mexicodf/" target="_self">
+    <i class="fa fa-instagram inst fa-2x" style="color:#125688"></i>
+  </a></div>
+</div>
+</div>
+{% block footer %}
+{% endblock %}
+  <div class="copyright">
+  <div class="container clearfix">
+    <div class="pull-left">
+      <p style="color:white">Leopoldo Julián Lechuga López | LocaChilango © 2017</p>
+    </div>
+    <div class="pull-right">
+      <p style="color:white">julian.lechuga305@gmail.com</p>
+    </div></div></div>
 </div>
 </body>
 </html>

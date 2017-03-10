@@ -1,0 +1,115 @@
+{% extends "base_locations.html" %}
+
+{% block content %}
+{% if  type == 'restaurant' %}
+<div class="wrapper">
+  <div class="container clearfix">
+    <div class="pull-left page-category-title">
+      <h1>Restaurantes</h1>
+      <p class="letra_barra">Los mejores lugares para el antojo que tengas</p>
+    </div>
+  </div>
+</div>
+
+{% elif type == 'bar' %}
+<div class="wrapper">
+  <div class="container clearfix">
+    <div class="pull-left page-category-title">
+      <h1>Bares</h1>
+      <p class="letra_barra">Música, amigos y fiesta en los mejores lugares de la ciudad</p>
+    </div>
+  </div>
+</div>
+
+{% elif  type == 'lodging' %}
+<div class="wrapper">
+  <div class="container clearfix">
+    <div class="pull-left page-category-title">
+      <h1>Hoteles</h1>
+      <p class="letra_barra">Descansa después de un día lleno de aventuras</p>
+    </div>
+  </div>
+</div>
+
+{% elif  type == 'shopping_mall' %}
+<div class="wrapper">
+  <div class="container clearfix">
+    <div class="pull-left page-category-title">
+      <h1>Tiendas</h1>
+      <p class="letra_barra">Encuentra todo lo que buscas en las mejores tiendas de México</p>
+    </div>
+  </div>
+</div>
+
+{% elif type == 'cafe' %}
+<div class="wrapper">
+  <div class="container clearfix">
+    <div class="pull-left page-category-title">
+      <h1>Cafés</h1>
+      <p class="letra_barra">Para relajarte y disfrutar del tiempo</p>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+<div class="page-content">
+  <div class="wrapper">
+<div id="img-grid" class="row">
+<div class="col-md-4">
+  <div class="thumbnail">
+    <a href="/500/{{type}}/Polanco"><img class="image-responsive" src="http://www.polarea.com.mx/img/slider/slide-4-1.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Polanco</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Condesa"><img class="image-responsive" src="http://www.luxurydreamhotels.com/content/gallery/295/original/condesa-luxury-dream-hotels-0.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Condesa</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Coyoacán"><img class="image-responsive" src="http://charly-tours.com/images/museo-frida-kahlo-19.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Coyoacán</p></div>
+    </a></div></div>
+
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Roma"><img class="image-responsive" src="http://cdn.vogue.mx/uploads/images/thumbs/mx/vog/2/s/2016/11/mejores_restaurantes_colonia_roma_487238653_1920x1080.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Roma</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Centro"><img class="image-responsive" src="http://aztectourz.com/wp-content/uploads/2015/05/bellas_artes_content.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Centro</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/San Ángel"><img class="image-responsive" src="http://static.panoramio.com/photos/original/18741315.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">San Ángel</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Santa Fe"><img class="image-responsive" src="https://i.ytimg.com/vi/WvJNXwAlhYI/maxresdefault.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Santa Fe</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Nápoles"><img class="image-responsive" src="http://static.panoramio.com/photos/original/106917757.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Nápoles</p></div>
+    </a></div></div>
+
+<div class="col-md-4">
+    <div class="thumbnail">
+    <a href="/500/{{type}}/Reforma"><img class="image-responsive" src="http://mxcity.mx/wp-content/uploads/2015/05/iStock_000040936578Large-1920x1080.jpg" >
+      <div class="caption"><p class="letra_barra text-align:center">Reforma</p></div>
+    </a></div></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

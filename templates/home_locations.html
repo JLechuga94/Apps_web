@@ -1,6 +1,48 @@
 {% extends "base_locations.html" %}
 
 {% block content %}
-    Bienvenido!
-    <br>{{descripcion}}
+  <body>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="row">
+        <div id="mainbanner">
+            <div class="col-md-12 col-xs-12">
+              <h1>Encuentra todo tipo de comercios de manera sencilla y rápida</h1>
+            </div>
+        </div>
+        <img src="http://static.panoramio.com/photos/original/7280059.jpg">
+        </div>
+        <div class="jumbotron">
+          <div id="sub-image">
+          <h2>Lo mejor en la Ciudad de México está a un clic de alcance</h2>
+          <h3>¡No esperes más y prueba ya nuestra aplicación!</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+{% endblock %}
+{% block footer %}
+      <div id="pie_pagina" class="container ">
+        <div class="row">
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            <div class="widgets">
+              <h11 style="font-size: 20px">Acerca de nosotros</h4>
+            <p class="text-justify">Somos una empresa dedicada generar contenidos de software
+              y aplicaciones que faciliten el día a día de los capitalinos.
+              Unéte a esta experiencia y comienza a disfrutar de todo lo que
+              la CDMX te puede ofrecer.</p>
+          </div></div>
+          <div class="col-md-4 col-sm-4 col-xs-12"> </div>
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="widgets">
+              <h12 style="font-size: 20px">Accesos rápidos</h5>
+            <ul>
+              <a href="http://127.0.0.1:5000/500/restaurant/Roma" target="_self"><li class="text-muted">Blog</li></a>
+              <a href="http://www.ssp.cdmx.gob.mx/" target="_self"><li class="text-muted">SSP CDMX</li></a>
+              <a href="https://www.facebook.com/julian.lechugalopez" target="_self"><li class="text-muted">Contacto</li></a>
+            </ul></div>
+      </div></div></div>
+  </body>
 {% endblock %}
